@@ -32,10 +32,8 @@ class Platillos extends React.Component {
     });
 
     return (
-      <div className="container col-md-6">
-        <div className="panel panel-primary">
-          <div className="list-group Platillo-Menu">{platillosDiv}</div>
-        </div>
+      <div className="panel panel-primary">
+        <div className="list-group Platillo-Menu">{platillosDiv}</div>
       </div>
     );
   }

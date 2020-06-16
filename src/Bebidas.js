@@ -1,12 +1,12 @@
-import React from 'react';
-import './Platillos.css';
-import logo from './logo.svg';
-import TiendaController from './TiendaController';
-import Ordenar from './Ordenar';
+import React from 'react'
+import './Platillos.css'
+import logo from './logo.svg'
+import TiendaController from './TiendaController'
+import Ordenar from './Ordenar'
 
 class Bebidas extends React.Component {
   render() {
-    const bebidasDiv = [];
+    const bebidasDiv = []
     TiendaController.bebidas.forEach((value, index) => {
       bebidasDiv.push(
         <div className="list-group-item" key={index}>
@@ -23,22 +23,20 @@ class Bebidas extends React.Component {
               precio={value.precio}
               indice={index}
               hacerPedido={(indice, evento) => {
-                TiendaController.bebidasEnLaOrden(indice, evento);
+                TiendaController.bebidasEnLaOrden(indice, evento)
               }}
             />
           </div>
         </div>
-      );
-    });
+      )
+    })
 
     return (
-      <div className="container col-md-6">
-        <div className="panel panel-primary">
-          <div className="list-group Platillo-Menu">{bebidasDiv}</div>
-        </div>
+      <div className="panel panel-primary">
+        <div className="list-group Platillo-Menu">{bebidasDiv}</div>
       </div>
-    );
+    )
   }
 }
 
-export default Bebidas;
+export default Bebidas
