@@ -1,15 +1,15 @@
-import React from "react";
-import { observer } from "mobx-react";
-import TiendaController from "./TiendaController";
+import React from 'react'
+import {observer} from 'mobx-react'
+import TiendaController from './TiendaController'
 
 class Pedidos extends React.Component {
   actualizarCantidad(event) {
-    this.props.hacerPedido(this.props.indice, event.target.value);
+    this.props.hacerPedido(this.props.indice, event.target.value)
   }
 
   render() {
-    const platillosPedidos = [];
-    const bebidasPedidos = [];
+    const platillosPedidos = []
+    const bebidasPedidos = []
 
     TiendaController.platillos.forEach((value, index) => {
       if (value.cantidad !== 0) {
@@ -28,9 +28,9 @@ class Pedidos extends React.Component {
               </div>
             </div>
           </div>
-        );
+        )
       }
-    });
+    })
     TiendaController.bebidas.forEach((value, index) => {
       if (value.cantidad !== 0) {
         bebidasPedidos.push(
@@ -48,9 +48,9 @@ class Pedidos extends React.Component {
               </div>
             </div>
           </div>
-        );
+        )
       }
-    });
+    })
     return (
       <div className="col-md-6">
         <div className="panel panel-primary">
@@ -60,8 +60,8 @@ class Pedidos extends React.Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default observer(Pedidos);
+export default observer(Pedidos)

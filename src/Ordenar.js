@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 class Ordenar extends React.Component {
   actualizarCantidad = (event) => {
@@ -10,14 +10,19 @@ class Ordenar extends React.Component {
       <div className="">
         <br />
         <label>Cantidad: </label>
-        <input onChange={this.actualizarCantidad} type="number" min="0" max="20" />
+        <input
+          onChange={this.actualizarCantidad}
+          type="number"
+          min="0"
+          max="20"
+        />
         <label className="EspacioPlatillo">
           Precio:
           {this.props.precio}
         </label>
       </div>
-    );
+    )
   }
 }
 
-export default Ordenar;
+export default Ordenar

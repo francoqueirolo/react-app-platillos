@@ -1,12 +1,12 @@
-import React from 'react';
-import './Platillos.css';
-import logo from './logo.svg';
-import TiendaController from './TiendaController';
-import Ordenar from './Ordenar';
+import React from 'react'
+import './Platillos.css'
+import logo from './logo.svg'
+import TiendaController from './TiendaController'
+import Ordenar from './Ordenar'
 
 class Platillos extends React.Component {
   render() {
-    const platillosDiv = [];
+    const platillosDiv = []
     TiendaController.platillos.forEach((value, index) => {
       platillosDiv.push(
         <div className="list-group-item" key={index}>
@@ -23,20 +23,20 @@ class Platillos extends React.Component {
               precio={value.precio}
               indice={index}
               hacerPedido={(indice, evento) => {
-                TiendaController.ponerOrden(indice, evento);
+                TiendaController.ponerOrden(indice, evento)
               }}
             />
           </div>
         </div>
-      );
-    });
+      )
+    })
 
     return (
       <div className="panel panel-primary">
         <div className="list-group Platillo-Menu">{platillosDiv}</div>
       </div>
-    );
+    )
   }
 }
 
-export default Platillos;
+export default Platillos

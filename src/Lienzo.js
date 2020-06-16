@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
-import Platillos from './Platillos';
-import Pedidos from './Pedidos';
-import Bebidas from './Bebidas';
+import React, {Component} from 'react'
+import {Route, Link} from 'react-router-dom'
+import Platillos from './Platillos'
+import Pedidos from './Pedidos'
+import Bebidas from './Bebidas'
 
 class Lienzo extends Component {
   render() {
-    console.log(this.props.location);
-    console.log(this.props.match);
-    console.log(this.props.history);
+    console.log(this.props.location)
+    console.log(this.props.match)
+    console.log(this.props.history)
     return (
       <div className="container">
         <div className="jumbotron">
@@ -34,8 +34,8 @@ class Lienzo extends Component {
           <Pedidos />
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Lienzo;
+export default Lienzo
